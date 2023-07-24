@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: sans-serif;
+}
+body {
+    background: #333;
+    height: 100vh;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: lightgrey;
+}
+.logo a {
+    color: black;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.navigation {
+    display: flex;
+}
+.navigation ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.navigation ul li {
+    margin-left: 30px;
+}
+.navigation ul li a {
+    color: black;
+    font-size: 18px;
+    transition: .3s ease;
+}
+.navigation ul li a:hover {
+    color: red;
+}
+.navigation ul li a.active {
+    color: red;
+}
+#menu-btn, #close-btn {
+    cursor: pointer;
+    display: none;
+}
+
+
+@media screen and (max-width: 769px) {
+    nav {
+        padding: 15px 3%;
+    }
+    .navigation ul {
+        position: absolute;
+        top: 0;
+        right: -220px;
+        background: #222;
+        height: 100vh;
+        width: 220px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        transition: .4s ease;
+    }
+    .navigation ul li {
+        padding: 20px 0 20px 40px;
+        margin-left: 0;
+    }
+    .navigation ul li a {
+        color: #fff;
+    }
+    #menu-btn {
+        display: initial;
+        color: black;
+    }
+    #close-btn {
+        display: initial;
+        color: #fff;
+        padding: 20px 0 20px 20px;
+    }
+    .navigation ul.active {
+        right: 0;
+    }
+
+}
